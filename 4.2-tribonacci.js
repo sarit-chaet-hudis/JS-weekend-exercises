@@ -1,4 +1,4 @@
-const fibonacci = (signature, n) => {
+const tribonacci = (signature, n) => {
   let curLength = 3;
   const fibo = signature;
   while (fibo.length < n) {
@@ -9,4 +9,4 @@ const fibonacci = (signature, n) => {
   return fibo;
 };
 
-console.log(fibonacci([0, 0, 1], 9));
+console.log(tribonacci([0, 0, 1], 9));
