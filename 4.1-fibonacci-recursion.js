@@ -1,9 +1,11 @@
 const fibonacci = function (n) {
-    const seq = [0,1];
-    while (seq.length < n) {
-        
-    }
-    
-  };
-  
-  console.log(fibonacci([1, 1], 9));
+  if (n < 2) {
+    console.log(`n<2, return n: ${n}`);
+    return n;
+  } else {
+    console.log(`n>2, reach for two smaller items`);
+    return fibonacci(n-1) + fibonacci(n-2);
+  }
+};
+
+console.log(fibonacci(9));
