@@ -8,11 +8,14 @@ function toWeirdCase(str) {
 
   let toUpper = true;
   for (let i = 0; i < strArray.length; i++) {
-    if (strArray[i]  === " " ) {
-        // current char is space, next is new word, so should be capitalized
-        toUpper = false;
+    if (strArray[i] === " ") {
+      // current char is space, next is new word, so should be capitalized
+      toUpper = false;
     }
-    toUpper ? strArray[i] = strArray[i].toUpperCase() : strArray[i] = strArray[i].toLowerCase() ;
+    // Edit array in-place
+    toUpper
+      ? (strArray[i] = strArray[i].toUpperCase())
+      : (strArray[i] = strArray[i].toLowerCase());
     toUpper = !toUpper;
   }
 
